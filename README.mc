@@ -83,9 +83,9 @@ spring.datasource.password=lozinka
 
 ## Autor
 
-- Ime: [Ovde uneti ime i prezime]
-- GitHub: [tvoj GitHub profil]
-- Email: [tvoj kontakt mejl]
+- Ime: [Vukašin Patković]
+- GitHub: [https://github.com/patkovicvukasin]
+- Email: [vukasinpatkovic@gmail.com]
 
 ---
 Za više informacija i demonstraciju rada, pogledajte JSP stranice i kontrolere unutar projekta.
