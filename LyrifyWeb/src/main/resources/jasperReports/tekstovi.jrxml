@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="tekstovi" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d13416c3-af33-474f-a8b5-f51a404c4895">
+	<parameter name="odabraniZanr" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="tekstPesmeId" class="java.lang.Integer"/>
+	<field name="nazivPesme" class="java.lang.String"/>
+	<field name="izvodjac" class="java.lang.String"/>
+	<field name="korisnickoIme" class="java.lang.String"/>
+	<field name="prosecnaOcena" class="java.lang.Double"/>
+	<variable name="brTekstova" class="java.lang.Integer" calculation="Count">
+		<variableExpression><![CDATA[$F{tekstPesmeId}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="161" y="30" width="233" height="30" uuid="6cacf168-5ee5-40a8-b9cf-4fb6c36093b0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Tekstovi za zanr]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="0" width="100" height="30" uuid="45b156a3-bb6a-49ea-be98-e17483171ba7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Odabrani zanr:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="0" width="100" height="30" uuid="5ad65066-af13-4f3c-989b-72a4c6a0b60a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{odabraniZanr}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="20" width="70" height="30" uuid="dddf420b-e608-40b4-83cd-09aa05446a82"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[id teksta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="20" width="160" height="30" uuid="20cb9bae-53cf-41ab-9705-eeb6fd87e063"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Naziv pesme]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="20" width="120" height="30" uuid="bfc76c84-37f2-473f-89fa-d23c0d5a8484"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Autor pesme]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="20" width="80" height="30" uuid="5c0af528-d25d-4504-8a8b-0d85142c3993"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Autor teksta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="20" width="90" height="30" uuid="4373bf96-a2bd-4774-b266-0db8273fcabc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Prosek]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="36" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="6" width="70" height="30" uuid="f4cdd6c3-3121-426d-ace7-159f328cd87f"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tekstPesmeId}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="6" width="160" height="30" uuid="8642724f-05a9-4e9e-944f-78ab6798f3ae"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nazivPesme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="6" width="120" height="30" uuid="1cf9f8b7-8c91-446b-a6a6-bafecd0c30e5"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{izvodjac}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="6" width="80" height="30" uuid="7098531b-f4cc-4b0c-b321-28890f0292dd"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{korisnickoIme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="6" width="90" height="30" uuid="96b80083-521c-4776-bae2-402feacbbfc4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{prosecnaOcena}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="227" y="0" width="100" height="30" uuid="a46f8171-0b78-4d92-a758-6f81cf2ff5cc"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="62" splitType="Stretch"/>
+	</summary>
+</jasperReport>
